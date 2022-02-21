@@ -2,8 +2,8 @@
 and determines whether it's parentheses, braces, and curly brackets are "balanced."'''
 import stack_module
 
-open_list = ["{", "[", "("]
-close_list = ["}", "]", ")"]
+open_list = ["[", "{", "("]
+close_list = ["]", "}", ")"]
 
 
 def check_parentheses(my_check_str):
@@ -26,4 +26,8 @@ def check_parentheses(my_check_str):
 
 # Driver code
 string = "{[]{()}}"
+print(string, "-", check_parentheses(string))
+string = "[{}{})(]"
+print(string, "-", check_parentheses(string))
+string = "((()"
 print(string, "-", check_parentheses(string))
