@@ -38,12 +38,6 @@ class Stack:
             return 0
         return self.root.index
 
-
-if __name__ == '__main__':
-    s = Stack()
-    s.push('a')
-    s.push('b')
-    s.push('c')
-    s.push('d')
-    s.pop()
-print(len(s))
+    def __getitem__(self, item):
+        '''Primitive get_item ,returned only root'''
+        return self.root

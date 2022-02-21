@@ -1,15 +1,13 @@
 '''Write a program that reads in a sequence of characters,
 and determines whether it's parentheses, braces, and curly brackets are "balanced."'''
-
-from stack_module import Stack
-
+import stack_module
 
 open_list = ["{", "[", "("]
 close_list = ["}", "]", ")"]
 
 
 def check_parentheses(my_check_str):
-    stack = Stack()
+    stack = stack_module.Stack()
     for i in my_check_str:
         if i in open_list:
             stack.push(i)
